@@ -130,4 +130,8 @@ typedef NS_ENUM(NSUInteger, SSKeychainQuerySynchronizationMode) {
 + (BOOL)isSynchronizationAvailable;
 #endif
 
+// – Following methods were supposed to be private, but are exposed here in the header for easier subclassing.
+- (NSMutableDictionary *)query;
++ (NSError *)errorWithCode:(OSStatus) code;
+
 @end
